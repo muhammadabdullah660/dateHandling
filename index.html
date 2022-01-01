@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Date Handling-Assignment#8</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <br>
+        <div class="row">
+            <div class="col-lg-3" id="divProgram1">
+                <h3>Current date</h3>
+                Click Button to get Current Date <br>
+                <button type="button" onclick="program1()">Click here</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram2">
+                <h3>Number of days in a month. </h3>
+                <!--  Enter Month (First Three Characters) :  <br>
+                <input type="text" name="" id="program2" required maxlength="3"> -->
+                <select name="" id="selectMonth">
+                    <option value="" disabled selected>Select month</option>
+                    <option value="january">January</option>
+                    <option value="febraury">Febraury</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+                <button type="button" onclick="program2()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram3">
+                <h3> month name from a particular date. </h3>
+                Enter Date: <br>
+                <input type="text" name="numInput" id="program3" required maxlength="10" placeholder="mm/dd/yyyy">
+                <button type="button" onclick="program3()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram4">
+                <h3>Add specified minutes to a Date object. </h3>
+                Enter minutes: <br>
+                <input type="text" name="program4" id="program4" required maxlength="2" placeholder="01 to 60"> <br>
+                <button type="button" onclick="program4()">Result</button>
+            </div>
+        </div>
+
+        <!-- row 2 -->
+        <div class="row">
+
+            <div class="col-lg-3" id="divProgram5">
+                <h1>Program 5</h1>
+                <h3>Test whether a date is a weekend</h3>
+                Enter Date: <br>
+                <input type="text" name="program5" id="program5" required maxlength="2" placeholder="dd"> <br>
+                Enter Month: <br>
+                <input type="text" name="program5" id="program5a" required maxlength="2" placeholder="mm"> <br>
+                Enter Year: <br>
+                <input type="text" name="program5" id="program5b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program5()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram6">
+                <h1> Program 6</h1>
+                <h3> Calculate "Yesterday day" </h3>
+                Enter Date: <br>
+                <input type="text" name="program6" id="program6" required maxlength="2" placeholder="dd"> <br>
+                Enter Month (0 is January): <br>
+                <input type="text" name="program6" id="program6a" required maxlength="2" placeholder="mm (0-11)"> <br>
+                Enter Year: <br>
+                <input type="text" name="program6" id="program6b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program6()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram7">
+                <h1> Program 7 </h1>
+                <h3>Add specified months to a date. </h3>
+                Enter Date: <br>
+                <input type="text" class="program7" id="program7" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program7" id="program7a" required maxlength="" placeholder="january"> <br>
+                Enter Year: <br>
+                <input type="text" class="program7" id="program7b" required maxlength="4" placeholder="yyyy"> <br>
+                Enter Number of Months to add: <br>
+                <input type="number" class="program7" id="program7c" required maxlength="" placeholder="enter here">
+                <br>
+                <button type="button" onclick="program7()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram8">
+                <h1> Program 8</h1>
+                <h3> add specified weeks to a date. </h3>
+                Enter Date: <br>
+                <input type="text" class="program8" id="program8" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program8" id="program8a" required maxlength="" placeholder="january"> <br>
+                Enter Year: <br>
+                <input type="text" class="program8" id="program8b" required maxlength="4" placeholder="yyyy"> <br>
+                Enter Number of Weeks to add: <br>
+                <input type="number" class="program8" id="program8c" required maxlength="" placeholder="enter here">
+                <br>
+                <button type="button" onclick="program8()">Result</button>
+            </div>
+
+        </div>
+
+        <!-- row 3 -->
+        <div class="row">
+            <div class="col-lg-3" id="divProgram9"> <br>
+                <h1> Program 9</h1>
+                <h3>Add specified years to a date. . </h3>
+                Enter Date: <br>
+                <input type="text" class="program9" id="program9" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program9" id="program9a" required maxlength="" placeholder="january"> <br>
+                Enter Year: <br>
+                <input type="text" class="program9" id="program9b" required maxlength="4" placeholder="yyyy"> <br>
+                Enter Number of Years to add: <br>
+                <input type="number" class="program9" id="program9c" required maxlength="" placeholder="enter here">
+                <br>
+                <button type="button" onclick="program9()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram10"> <br>
+                <h1>Program 10</h1>
+                <h3>Timezone offset in seconds. </h3>
+                Enter Date: <br>
+                <input type="text" class="program10" id="program10" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program10" id="program10a" required maxlength="" placeholder="january"> <br>
+                Enter Year: <br>
+                <input type="text" class="program10" id="program10b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program10()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram11"> <br>
+                <h1> Program 11 </h1>
+                <h3>Full numeric representation of a year (4 digits). </h3>
+                Enter Date: <br>
+                <input type="text" class="program11" id="program11" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program11" id="program11a" required maxlength="" placeholder="january"> <br>
+                Enter Year: <br>
+                <input type="text" class="program11" id="program11b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program11()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram12"> <br>
+                <h1> Program 12</h1>
+                <h3>A two digit representation of a year. </h3>
+                Enter Date: <br>
+                <input type="text" class="program12" id="program12" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program12" id="program12a" required maxlength="" placeholder="january"> <br>
+                Enter Year: <br>
+                <input type="text" class="program12" id="program12b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program12()">Result</button>
+            </div>
+
+        </div>
+        <br>
+        <!-- row 4 -->
+        <div class="row">
+
+            <div class="col-lg-3" id="divProgram13"> <br>
+                <h1> Program 13 </h1>
+                <h3>A short textual representation of a month, three letters (Jan through Dec)</h3>
+                Enter Date: <br>
+                <input type="text" class="program13" id="program13" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program13" id="program13a" required maxlength="" placeholder="january"> <br>
+                Enter Year: <br>
+                <input type="text" class="program13" id="program13b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program13()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram14"> <br>
+                <h1> Program 14</h1>
+                <h3>A full textual representation of a month, such as January or June</h3>
+                Enter Date: <br>
+                <input type="text" class="program14" id="program14" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program14" id="program14a" required maxlength="3" placeholder="jan"> <br>
+                Enter Year: <br>
+                <input type="text" class="program14" id="program14b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program14()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram15"> <br>
+                <h1> Program 15</h1>
+                <h3>A numeric representation of a month, with leading zeros (01 through 12)</h3>
+                Enter Date: <br>
+                <input type="text" class="program15" id="program15" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program15" id="program15a" required maxlength="3" placeholder="jan"> <br>
+                Enter Year: <br>
+                <input type="text" class="program15" id="program15b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program15()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram16"> <br>
+                <h1> Program 16</h1>
+                <h3> JavaScript program to calculate age.</h3>
+                Enter Date: <br>
+                <input type="text" class="program16" id="program16" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program16" id="program16a" required maxlength="3" placeholder="jan"> <br>
+                Enter Year: <br>
+                <input type="text" class="program16" id="program16b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program16()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram17"> <br>
+                <h1> Program 17</h1>
+                <h3>A full textual representation of the day of the week (Sunday through Saturday)</h3>
+                Enter Date: <br>
+                <input type="text" class="program17" id="program17" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program17" id="program17a" required maxlength="3" placeholder="jan"> <br>
+                Enter Year: <br>
+                <input type="text" class="program17" id="program17b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program17()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram18"> <br>
+                <h1> Program 18</h1>
+                <h3>A textual representation of a day (Three letters, Mon through Sun)</h3>
+                Enter Date: <br>
+                <input type="text" class="program18" id="program18" required maxlength="2" placeholder="dd"> <br>
+                Enter Month Name: <br>
+                <input type="text" class="program18" id="program18a" required maxlength="3" placeholder="jan"> <br>
+                Enter Year: <br>
+                <input type="text" class="program18" id="program18b" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program18()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram19"> <br>
+                <h1> Program 19</h1>
+                <h3>Count the number of days passed since beginning of the year(2021) </h3>
+                <button type="button" onclick="program19()">check</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram20"> <br>
+                <h1> Program 20 </h1>
+                <h3> Amount of days of a year. </h3>
+                Enter Year: <br>
+                <input type="text" class="program20" id="program20" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program20()">Result</button>
+            </div>
+        </div>
+
+        <!-- row 5 -->
+        <div class="row">
+
+            <div class="col-lg-3" id="divProgram21"> <br>
+                <h1> Program 21</h1>
+                <h3> Last day of a month. </h3>
+                Enter Year: <br>
+                <input type="text" class="program21" id="program21" required maxlength="4" placeholder="yyyy">
+                <select name="" id="program21a">
+                    <option value="" disabled selected>Select month</option>
+                    <option value="0">January</option>
+                    <option value="1">Febraury</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select> <br> <br>
+                <button type="button" onclick="program21()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram22"> <br>
+                <h1> Program 22 </h1>
+                <h3> Compare dates (i.e. greater than, less than or equal to) </h3>
+                Enter Date 1: <br>
+                <input type="text" class="program22" id="program22" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program22a" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program22b" required maxlength="4" placeholder="yyyy"> <br>
+                Enter Date 2: <br>
+                <input type="text" class="program22" id="program22c" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program22d" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program22e" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program22()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram23"> <br>
+                <h1> Program 23 </h1>
+                <h3> Difference between two dates in days. </h3>
+                Enter Date 1: <br>
+                <input type="text" class="program22" id="program23" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program23a" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program23b" required maxlength="4" placeholder="yyyy"> <br>
+                Enter Date 2: <br>
+                <input type="text" class="program22" id="program23c" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program23d" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program23e" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program23()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram24"> <br>
+                <h1> Program 24 </h1>
+                <h3> Last day of a month. </h3>
+                Enter Date : <br>
+                <input type="text" class="program22" id="program24a" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program24b" required maxlength="4" placeholder="yyyy">
+                <button type="button" onclick="program24()">Result</button>
+            </div>
+        </div>
+
+
+
+        <!--  row 6 -->
+        <br>
+        <div class="row">
+
+            <div class="col-lg-3" id="divProgram25">
+                <h1> Program 25 (49)</h1>
+                <h3> Time differences in years between two dates. </h3>
+                Enter Date 1: <br>
+                <input type="text" class="program22" id="program25" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program25a" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program25b" required maxlength="4" placeholder="yyyy"> <br>
+                Enter Date 2: <br>
+                <input type="text" class="program22" id="program25c" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program25d" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program25e" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program25()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram26">
+                <h1> Program 26 (48)</h1>
+                <h3> Time differences in months between two dates. </h3>
+                Enter Date 1: <br>
+                <input type="text" class="program22" id="program26" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program26a" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program26b" required maxlength="4" placeholder="yyyy"> <br>
+                Enter Date 2: <br>
+                <input type="text" class="program22" id="program26c" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program26d" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program26e" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program26()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram27">
+                <h1> Program 27(47) </h1>
+                <h3> Time differences in weeks between two dates. . </h3> <br>
+                Enter Date 1: <br>
+                <input type="text" class="program22" id="program27" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program27a" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program27b" required maxlength="4" placeholder="yyyy"> <br>
+                Enter Date 2: <br>
+                <input type="text" class="program22" id="program27c" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program27d" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program27e" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program27()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram28">
+                <h1> Program 28(50)</h1>
+                <h3> Week start date</h3> <br>
+                <button type="button" onclick="program28()">Result</button>
+            </div>
+        </div>
+        <br>
+        <!-- row 7 -->
+        <div class="row">
+            <div class="col-lg-3" id="divProgram29">
+                <h1> Program 29</h1>
+                <h3> 51. week end date</h3>
+                <button type="button" onclick="program29()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram30">
+                <h1> Program 30</h1>
+                <h3> Month start date</h3>
+                <button type="button" onclick="program30()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram31">
+                <h1> Program 31</h1>
+                <h3> Month end date</h3>
+                <button type="button" onclick="program31()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram32">
+                <h1> Program 32</h1>
+                <h3> Time differences in hours between two dates.</h3>
+                Enter Date 1: <br>
+                <input type="text" class="program22" id="program32" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program32a" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program32b" required maxlength="4" placeholder="yyyy"> <br>
+                Enter Date 2: <br>
+                <input type="text" class="program22" id="program32c" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program32d" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program32e" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program32()">Result</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- row 8-->
+            <div class="col-lg-3" id="divProgram33">
+                <h1> Program 33</h1>
+                <h3> Time differences in minutes between two dates. </h3>
+                Enter Date 1: <br>
+                <input type="text" class="program22" id="program33" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program33a" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program33b" required maxlength="4" placeholder="yyyy"> <br>
+                Enter Date 2: <br>
+                <input type="text" class="program22" id="program33c" required maxlength="2" placeholder="dd">
+                <input type="text" class="program22" id="program33d" required maxlength="2" placeholder="mm">
+                <input type="text" class="program22" id="program33e" required maxlength="4" placeholder="yyyy"> <br>
+                <button type="button" onclick="program33()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram34">
+                <h1> Program 34</h1>
+                <h3> Timezone</h3>
+                <button type="button" onclick="program34()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram35">
+                <h1> Program 35</h1>
+                <h3> Uppercase Ante meridiem and Post meridiem</h3>
+                <button type="button" onclick="program35()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram36">
+                <h1> Program 36 </h1>
+                <h3> Lowercase Ante meridiem and Post meridiem.</h3>
+                <button type="button" onclick="program36()">Result</button>
+            </div>
+        </div>
+        <!-- row 9 -->
+        <div class="row">
+            <div class="col-lg-3" id="divProgram37">
+                <h1> Program 37</h1>
+                <h3> 12-hour format of an hour with leading zeros.</h3>
+                <button type="button" onclick="program37()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram38">
+                <h1> Program 38</h1>
+                <h3> 24-hour format of an hour without leading zeros.</h3>
+                <button type="button" onclick="program38()">Result</button>
+            </div>
+
+            <div class="col-lg-3" id="divProgram39">
+                <h1> Program 39</h1>
+                <h3> Minutes with leading zeros (00 to 59).</h3>
+                Enter minutes: (0 to 59) <br>
+                <input type="text" class="program22" id="program39" required maxlength="2" placeholder="">
+                <button type="button" onclick="program39()">Result</button>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+</body>
+
+</html>
